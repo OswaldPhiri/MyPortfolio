@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your global CSS file or inside a <style> block */
+body {
+    margin: 0; /* Removes all margin around the body */
+    padding: 0; /* Removes all padding around the body */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  }
+  
+  /* Adjust navbar styling */
+  .navbar {
+    margin: 0; /* Removes any margin around the navbar */
+    padding: 0.5rem 2rem; /* Adjusts padding to fit the navbar nicely */
+    background-color: #f7f7f7; /* Keeps the background consistent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: fixed; /* Makes the navbar fixed to the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top */
+  }
+  
+  /* Additional global reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  

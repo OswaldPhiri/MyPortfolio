@@ -1,39 +1,71 @@
 <template>
-    <footer class="bg-gray-900 text-white py-8">
-      <div class="container mx-auto text-center">
-        <!-- Logo or Initials -->
-        <div class="text-4xl font-bold mb-4">
-          <span>{A}</span>
-        </div>
-        
-        <!-- Social Media Links -->
-        <div class="flex justify-center space-x-6 mb-4">
-          <!-- <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
-            <img src="@/assets/icons/github.png" alt="GitHub" class="w-6 h-6">
-          </a> -->
-          <!-- <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
-            <img src="@/assets/icons/linkedin-icon.svg" alt="LinkedIn" class="w-6 h-6">
-          </a>
-          <a href="mailto:your.email@example.com" aria-label="Email">
-            <img src="@/assets/icons/email-icon.svg" alt="Email" class="w-6 h-6">
-          </a> -->
-        </div>
-  
-        <!-- Copyright or Tagline -->
-        <div class="text-gray-500 text-sm">
-          <p>© 2024 Your Name. All Rights Reserved.</p>
-        </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span>{O}</span>
       </div>
-    </footer>
-  </template>
-  
-  <script>
-  export default {
-    name: "AppFooter",
-  };
-  </script>
-  
-  <style scoped>
-  /* Additional styling can go here */
-  </style>
-  
+
+      <div class="footer-socials">
+        <!-- Social Media Links -->
+        <a href="https://github.com/yourprofile" target="_blank" class="social-link">
+          <img src="@/assets/images/github.png" alt="GitHub" />
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">
+          <img src="@/assets/images/react.png" alt="LinkedIn" />
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank" class="social-link">
+          <img src="@/assets/images/code.jpg" alt="Twitter" />
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        <p>© 2024 Oswald Phiri. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<style scoped>
+.footer {
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+.social-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.social-link:hover {
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+  color: #666;
+}
+</style>
