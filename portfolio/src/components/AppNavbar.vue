@@ -1,15 +1,19 @@
 <template>
   <nav class="navbar">
-    <div class="navbar-content">
-      <!-- Logo Section -->
-      <a href="/" class="navbar-logo" style = "font-family: cursive; font-weight: bold; font-size: large;">
-       Portfolio
-      </a>
-      <!-- Links Section -->
-      <ul class="navbar-links">
-        <li><a href="/" class="navbar-link">Home</a></li>
-        <li><a href="AppProjects" class="navbar-link">Projects</a></li>
-        <li><a href="AppContact" class="navbar-link">Contact</a></li>
+    <div class="navbar-container">
+      <router-link to="/" class="navbar-brand">
+        <!-- <img src="@/assets/images/logo.png" alt="Logo" class="logo" /> -->
+      </router-link>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <router-link to="/" class="nav-link">Home</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/projects" class="nav-link">Projects</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/contact" class="nav-link">Contact</router-link>
+        </li>
       </ul>
     </div>
   </nav>
@@ -17,42 +21,42 @@
 
 <style scoped>
 .navbar {
-  background-color: #f7f7f7;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 0, 0.2); /* Faint yellow shadow */
+  border-bottom: 2px solid rgba(255, 255, 0, 0.2); /* Light yellow border */
 }
 
-.navbar-content {
-  max-width: 1200px;
-  width: 100%;
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
-.navbar-logo img {
-  height: 50px;
+.navbar-brand .logo {
+  height: 40px;
 }
 
-.navbar-links {
+.navbar-nav {
   list-style: none;
   display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+  gap: 1.5rem;
 }
 
-.navbar-link {
-  color: #333;
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding: 0.5rem;
 }
 
-.navbar-link:hover {
+.nav-link:hover {
   color: #007bff;
+  border-bottom: 2px solid #f8e9a8; /* Yellow underline */
 }
 </style>

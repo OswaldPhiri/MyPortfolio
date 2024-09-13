@@ -1,5 +1,5 @@
 <template>
-  <section class="work-experience">
+  <section class="projects-section">
     <h2 class="section-title">Projects</h2>
     <div class="projects-container">
       <!-- Project 1 -->
@@ -45,9 +45,8 @@
 </template>
 
 <style scoped>
-.work-experience {
-  background-color: #f7f7f7;
-  padding: 3rem 1rem;
+.projects-section {
+  padding: 4rem 1rem;
 }
 
 .section-title {
@@ -60,53 +59,65 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
 .project-item {
-  display: flex;
-  align-items: flex-start;
-  background-color: #fff;
-  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 0, 0.2); /* Faint yellow shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 0 15px rgba(255, 255, 0, 0.3); /* More pronounced yellow shadow on hover */
 }
 
 .project-logo {
-  width: 64px; /* Larger logo for better visibility */
-  height: 64px;
-  margin-right: 1.5rem;
-  border-radius: 8px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-logo {
+  transform: scale(1.05);
 }
 
 .project-details {
-  text-align: left;
-  flex-grow: 1; /* Allow project details to take up remaining space */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.project-item:hover .project-details {
+  opacity: 1;
 }
 
 .project-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #333;
 }
 
 .project-duration {
   font-size: 0.9rem;
-  color: #007BFF;
+  color: #ddd;
   margin-bottom: 0.5rem;
 }
 
 .project-description {
   font-size: 1rem;
-  color: #555;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
