@@ -11,8 +11,6 @@
         building software that is beneficial to developers and the world at large.
       </p>
 
-    
-
       <!-- Skills Section -->
       <section class="skills-section">
         <h2 class="section-title">Skills</h2>
@@ -32,6 +30,12 @@
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  name: 'AppHome',
+};
+</script>
 
 <style scoped>
 .hero-section {
@@ -94,26 +98,7 @@
   line-height: 1.6;
 }
 
-/* Update Call to Action Button with Yellow Highlight */
-.cta-button {
-  display: inline-block;
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  text-decoration: none;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 223, 70, 0.5);
-}
-
-.cta-button:hover {
-  background-color: #0056b3;
-  box-shadow: 0 0 15px rgba(255, 223, 70, 0.7);
-}
-
-/* Skills Section with Yellow Accent */
+/* Skills Section */
 .skills-section {
   background-color: #f7f7f7;
   padding: 3rem 1rem;
@@ -157,25 +142,5 @@
 .skill-item:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 223, 70, 0.5);
-}
-
-/* Social Icons with Yellow Accent */
-.social-icon {
-  color: #333;
-  font-size: 1.1rem;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  border: 1px solid rgba(255, 223, 70, 0.3); /* Yellow border around social icons */
-}
-
-.social-icon:hover {
-  background-color: #333;
-  color: #fff;
-  transform: scale(1.05);
 }
 </style>

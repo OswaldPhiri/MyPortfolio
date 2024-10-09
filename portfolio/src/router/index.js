@@ -7,23 +7,23 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: AppHome,
+    component: AppHome
   },
   {
     path: '/projects',
     name: 'Projects',
-    component: AppProjects,
+    component: AppProjects
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: AppContact,
-  },
+    component: AppContact
+  }
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes,
+  history: createWebHistory(),
+  routes
 });
 
 export default router;

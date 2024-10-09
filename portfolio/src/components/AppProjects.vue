@@ -125,7 +125,7 @@
 .project-link {
   display: inline-block;
   color: #fff;
-  background-color: #007BFF;
+  background-color: #c1d606;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
@@ -134,6 +134,6 @@
 }
 
 .project-link:hover {
-  background-color: #0056b3;
+  background-color: #c1d606;
 }
 </style>
