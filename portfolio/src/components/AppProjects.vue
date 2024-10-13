@@ -46,8 +46,10 @@
 
 <style scoped>
 .projects-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   padding: 4rem 1rem;
 }
+
 
 .section-title {
   font-size: 2.5rem;
@@ -68,12 +70,14 @@
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 0, 0.2); /* Faint yellow shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 0 15px rgba(255, 255, 0, 0.3); /* More pronounced yellow shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 0 15px rgba(255, 255, 0, 0.3); 
+  transform: translateY(-10px) rotate(1deg);
+  opacity: 0.95;
 }
 
 .project-logo {
@@ -123,17 +127,14 @@
 }
 
 .project-link {
-  display: inline-block;
+  background-color: #007bff;
   color: #fff;
-  background-color: #c1d606;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .project-link:hover {
-  background-color: #c1d606;
+  background-color: #0056b3;
 }
 </style>

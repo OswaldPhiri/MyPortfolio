@@ -3,15 +3,15 @@
     <h2 class="section-title">Contact Me</h2>
     <form class="contact-form" @submit.prevent="submitForm">
       <div class="form-group">
-        <label for="name">Name</label>
+        <!-- <label for="name">Name</label> -->
         <input type="text" id="name" v-model="formData.name" placeholder="Enter your name" required />
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <!-- <label for="email">Email</label> -->
         <input type="email" id="email" v-model="formData.email" placeholder="Enter your email" required />
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
+        <!-- <label for="message">Message</label> -->
         <textarea id="message" v-model="formData.message" rows="5" placeholder="Enter your message" required></textarea>
       </div>
       <button type="submit" class="submit-button">Send Message</button>

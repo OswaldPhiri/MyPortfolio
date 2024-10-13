@@ -26,7 +26,10 @@
   text-align: center;
   background-color: #fff;
   border-top: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 0, 0.2); /* Faint yellow shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 0, 0.2);
+  /* Position it at the bottom */
+  position: relative;
+  width: 100%;
 }
 
 .footer-container {
