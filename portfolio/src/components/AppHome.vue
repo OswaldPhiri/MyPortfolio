@@ -12,6 +12,10 @@
       </p>
 
       <!-- Skills Section -->
+       <!-- Download CV Button -->
+      <a class="download-cv" href="@/assets/Oswald_Phiri_CV.pdf" download>
+        Download My CV
+      </a>
       <section class="skills-section">
         <h2 class="section-title">Skills</h2>
         <div class="skills-container">
@@ -38,6 +42,23 @@ export default {
 </script>
 
 <style scoped>
+.download-cv {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #42b983;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.download-cv:hover {
+  background-color: #368a6b;
+  transform: scale(1.05);
+}
+
 .hero-section {
   background-color: #f7f7f7;
   padding: 5rem 2rem;

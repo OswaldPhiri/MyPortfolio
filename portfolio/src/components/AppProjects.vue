@@ -46,10 +46,8 @@
 
 <style scoped>
 .projects-section {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   padding: 4rem 1rem;
 }
-
 
 .section-title {
   font-size: 2.5rem;
@@ -127,14 +125,17 @@
 }
 
 .project-link {
-  background-color: #007bff;
+  display: inline-block;
   color: #fff;
+  background-color: #42b983;
   padding: 0.5rem 1rem;
-  border-radius: 50px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
 .project-link:hover {
-  background-color: #0056b3;
+  background-color: #c1d606;
 }
 </style>
