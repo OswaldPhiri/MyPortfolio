@@ -13,9 +13,10 @@
 
       <!-- Skills Section -->
        <!-- Download CV Button -->
-      <a class="download-cv" href="@/assets/Oswald_Phiri_CV.pdf" download>
+       <a class="download-cv" href="/CV.pdf" download>
         Download My CV
       </a>
+      
       <section class="skills-section">
         <h2 class="section-title">Skills</h2>
         <div class="skills-container">
