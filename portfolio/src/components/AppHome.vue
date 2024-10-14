@@ -7,8 +7,7 @@
       <!-- Main Title and Description -->
       <h1 class="hero-title">Software Engineer & IT Technician</h1>
       <p class="hero-subtitle">
-        I'm Oswald Phiri, a self-taught developer passionate about learning and
-        building software that is beneficial to developers and the world at large.
+        I'm Oswald Phiri, A dedicated developer passionate about crafting innovative software solutions that make a positive impact.
       </p>
 
       <!-- Skills Section -->
