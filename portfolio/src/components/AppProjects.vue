@@ -2,47 +2,61 @@
   <section class="projects-section">
     <h2 class="section-title">Projects</h2>
     <div class="projects-container">
-      <!-- Project 1 -->
-      <div class="project-item">
-        <img src="@/assets/images/faithful.png" alt="Project 1 Logo" class="project-logo" />
-        <div class="project-details">
-          <h3 class="project-title">Faithful Flock</h3>
-          <p class="project-duration">April 2024 - Present</p>
-          <p class="project-description">
-            Developed a church member management system using the Laravel PHP framework.
-          </p>
-          <a href="#" class="project-link">View Project</a>
-        </div>
+      <div v-for="(project, index) in projects" :key="index" class="project-item" @click="selectProject(index)">
+        <img :src="project.logo" :alt="project.title + ' Logo'" class="project-logo" />
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-duration">{{ project.duration }}</p>
       </div>
+    </div>
 
-      <!-- Project 2 -->
-      <div class="project-item">
-        <img src="@/assets/images/Finance.jpg" alt="Project 2 Logo" class="project-logo" />
-        <div class="project-details">
-          <h3 class="project-title">Finance Logger</h3>
-          <p class="project-duration">July 2024 - Sept 2024</p>
-          <p class="project-description">
-            A small finance management app built using the Django Python framework.
-          </p>
-          <a href="#" class="project-link">View Project</a>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-item">
-        <img src="@/assets/images/face.jpg" alt="Project 3 Logo" class="project-logo" />
-        <div class="project-details">
-          <h3 class="project-title">Emo Analyzer</h3>
-          <p class="project-duration">Aug 2024 - Present</p>
-          <p class="project-description">
-            An AI system that determines a person's mood based on their facial expression.
-          </p>
-          <a href="#" class="project-link">View Project</a>
-        </div>
-      </div>
+    <!-- Project Description Section -->
+    <div v-if="selectedProject" class="project-description-container">
+      <h3 class="project-title">{{ selectedProject.title }}</h3>
+      <p class="project-duration">{{ selectedProject.duration }}</p>
+      <p class="project-description">{{ selectedProject.description }}</p>
+      <a :href="selectedProject.link" class="project-link">View Project</a>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  name: 'ProjectsSection',
+  data() {
+    return {
+      projects: [
+        {
+          title: 'Faithful Flock',
+          duration: 'April 2024 - Present',
+          logo: require('@/assets/images/faithful.png'),
+          description: 'Developed a church member management system using the Laravel PHP framework.',
+          link: '#'
+        },
+        {
+          title: 'Finance Logger',
+          duration: 'July 2024 - Sept 2024',
+          logo: require('@/assets/images/Finance.jpg'),
+          description: 'A small finance management app built using the Django Python framework.',
+          link: '#'
+        },
+        {
+          title: 'Emo Analyzer',
+          duration: 'Aug 2024 - Present',
+          logo: require('@/assets/images/face.jpg'),
+          description: 'An AI system that determines a person\'s mood based on their facial expression.',
+          link: '#'
+        },
+      ],
+      selectedProject: null
+    };
+  },
+  methods: {
+    selectProject(index) {
+      this.selectedProject = this.projects[index];
+    }
+  }
+};
+</script>
 
 <style scoped>
 .projects-section {
@@ -50,7 +64,7 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 2rem;
   color: #333;
@@ -69,12 +83,12 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 0, 0.2); /* Faint yellow shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  cursor: pointer; /* Indicate that the item is clickable */
 }
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 0 15px rgba(255, 255, 0, 0.3); 
-  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 0 15px rgba(255, 255, 0, 0.3);
   opacity: 0.95;
 }
 
@@ -85,37 +99,28 @@
   transition: transform 0.3s ease;
 }
 
-.project-item:hover .project-logo {
-  transform: scale(1.05);
-}
-
-.project-details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-align: center;
-}
-
-.project-item:hover .project-details {
-  opacity: 1;
-}
-
 .project-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  text-align: center; /* Center text */
 }
 
 .project-duration {
   font-size: 0.9rem;
-  color: #ddd;
+  color: #090000;
   margin-bottom: 0.5rem;
+  text-align: center; /* Center text */
+}
+
+.project-description-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .project-description {

@@ -1,12 +1,9 @@
 <template>
   <div id="portfolio">
     <AppNavbar />
-
-    <!-- Routed views will be displayed here -->
     <main>
       <router-view />
     </main>
-
     <AppFooter />
   </div>
 </template>
@@ -25,11 +22,10 @@ export default {
 </script>
 
 <style>
-/* Set the overall layout */
 #portfolio {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the full height is covered */
+  min-height: 100vh; 
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,13 +47,12 @@ nav a.router-link-active {
   font-weight: bold;
 }
 
-/* Make sure the main content area grows to fill the remaining space */
 main {
-  flex-grow: 1; /* This makes the main content take up available space */
+  flex-grow: 1; 
   padding: 20px;
 }
 
-/* Footer stays at the bottom */
+
 footer {
   padding: 2rem 1rem;
   text-align: center;

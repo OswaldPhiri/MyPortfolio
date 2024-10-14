@@ -7,15 +7,10 @@
       <!-- Main Title and Description -->
       <h1 class="hero-title">Software Engineer & IT Technician</h1>
       <p class="hero-subtitle">
-        I'm Oswald Phiri, A dedicated developer passionate about crafting innovative software solutions that make a positive impact.
+        I'm Oswald Phiri, a dedicated developer passionate about crafting innovative software solutions that make a positive impact.
       </p>
 
       <!-- Skills Section -->
-       <!-- Download CV Button -->
-       <a class="download-cv" href="/CV.pdf" download>
-        Download My CV
-      </a>
-      
       <section class="skills-section">
         <h2 class="section-title">Skills</h2>
         <div class="skills-container">
@@ -28,7 +23,7 @@
           <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
           <div class="skill-item"><i class="fab fa-wordpress"></i> WordPress</div>
           <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
-          <div class="skill-item">Hardware/Software Troubleshooting</div> <!-- No icon available -->
+          <div class="skill-item">Hardware/Software Troubleshooting</div>
         </div>
       </section>
     </div>
@@ -42,25 +37,8 @@ export default {
 </script>
 
 <style scoped>
-.download-cv {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #42b983;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.download-cv:hover {
-  background-color: #368a6b;
-  transform: scale(1.05);
-}
-
 .hero-section {
-  background-color: #f7f7f7;
+  background-color: #ffffff; /* Use white background for consistency */
   padding: 5rem 2rem;
   display: flex;
   justify-content: center;
@@ -68,7 +46,7 @@ export default {
   min-height: 100vh;
   text-align: center;
   color: #333;
-  background-image: linear-gradient(to right, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to right, #f9f9f9, #e6e6e6);
 }
 
 .hero-content {
@@ -95,7 +73,6 @@ export default {
   border-radius: 50%;
   display: block;
   margin: 0 auto;
-  /* Add a faint yellow glow */
   box-shadow: 0 0 15px rgba(255, 223, 70, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -106,33 +83,33 @@ export default {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Adjusted for better prominence */
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #333;
+  color: #4a4a4a; /* Dark gray for better readability */
+  line-height: 1.2;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  color: #555;
+  color: #666; /* Slightly lighter gray for contrast */
   line-height: 1.6;
 }
 
 /* Skills Section */
 .skills-section {
-  background-color: #f7f7f7;
   padding: 3rem 1rem;
   text-align: center;
-  border-top: 3px solid rgba(255, 223, 70, 0.5); /* Add a faint yellow border at the top */
+  border-top: 3px solid rgba(255, 223, 70, 0.5);
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #333;
-  text-shadow: 1px 1px 5px rgba(255, 223, 70, 0.3); /* Faint yellow shadow for the title */
+  color: #4a4a4a; /* Consistent title color */
+  text-shadow: 1px 1px 5px rgba(255, 223, 70, 0.3);
 }
 
 .skills-container {
@@ -150,10 +127,10 @@ export default {
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1.2rem; /* Increased font size for better visibility */
+  color: #4a4a4a; /* Dark gray color for text */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 223, 70, 0.3); /* Yellow border around skill items */
+  border: 1px solid rgba(255, 223, 70, 0.3);
 }
 
 .skill-item i {
