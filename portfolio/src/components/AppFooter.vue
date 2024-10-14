@@ -1,18 +1,18 @@
 <template>
   <footer class="footer">
     <div class="footer-container">
-      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+      <p>&copy; 2024 OswaldPortfolio. All rights reserved.</p>
       <div class="social-media">
-        <a href="#" class="social-icon">
+        <a href="https://www.facebook.com/allswerd.phiri.9" class="social-icon">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="#" class="social-icon">
+        <a href="https://x.com/Alswerd1?t=hJmbhFh1BTPTH1UDT1rc1g&s=09" class="social-icon">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="#" class="social-icon">
+        <a href="https://www.linkedin.com/in/oswald-phiri-282b88246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="#" class="social-icon">
+        <a href="https://github.com/OswaldPhiri" class="social-icon">
           <i class="fab fa-github"></i>
         </a>
       </div>
