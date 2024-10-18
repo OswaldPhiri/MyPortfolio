@@ -46,6 +46,13 @@ export default {
           description: 'An AI system that determines a person\'s mood based on their facial expression.',
           link: '#'
         },
+        {
+          title: 'CV Creator',
+          duration: 'october 2024 - Present',
+          logo: require('@/assets/images/cv.png'),
+          description: 'A simple Next.Js app you can use to build your resume in minutes.',
+          link: 'https://cvcreator-alpha.vercel.app'
+        },
       ],
       selectedProject: null
     };
