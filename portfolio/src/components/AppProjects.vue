@@ -25,13 +25,13 @@ export default {
   data() {
     return {
       projects: [
-        {
-          title: 'Faithful Flock',
-          duration: 'April 2024 - Present',
-          logo: require('@/assets/images/faithful.png'),
-          description: 'Developed a church member management system using the Laravel PHP framework.',
-          link: '#'
-        },
+        // {
+        //   title: 'Faithful Flock',
+        //   duration: 'April 2024 - Present',
+        //   logo: require('@/assets/images/faithful.png'),
+        //   description: 'Developed a church member management system using the Laravel PHP framework.',
+        //   link: '#'
+        // },
         {
           title: 'Finance Logger',
           duration: 'July 2024 - Sept 2024',
