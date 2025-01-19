@@ -92,8 +92,8 @@
     display: inline-block;
     margin-top: 2rem;
     padding: 0.75rem 1.5rem;
-    background-color: #026d26; /* Green Button */
-    color: white;
+    background-color: #e6f74c; /* Green Button */
+    color: rgb(1, 1, 1);
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;

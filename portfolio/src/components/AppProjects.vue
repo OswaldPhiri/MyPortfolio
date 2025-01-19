@@ -34,14 +34,14 @@ export default {
         // },
         {
           title: 'Finance Logger',
-          duration: 'July 2024 - Sept 2024',
+          duration: 'July 2024 - Present',
           logo: require('@/assets/images/Finance.jpg'),
           description: 'A small finance management app built using the Django Python framework.',
           link: '#'
         },
         {
           title: 'Emo Analyzer',
-          duration: 'Aug 2024 - Present',
+          duration: 'In Progress',
           logo: require('@/assets/images/face.jpg'),
           description: 'An AI system that determines a person\'s mood based on their facial expression.',
           link: '#'
