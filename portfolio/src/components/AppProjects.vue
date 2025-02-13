@@ -42,7 +42,7 @@ export default {
         {
           title: 'AizenTech',
           duration: 'August 2024 - Present',
-          logo: require('@/assets/images/office.png'),
+          logo: require('@/assets/images/aizen.png'),
           description: 'A cutting-edge technology solutions company providing innovative software solutions.',
           link: 'https://aizen-tech-g8zz.vercel.app'
         }
