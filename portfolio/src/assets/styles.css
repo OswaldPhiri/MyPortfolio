@@ -1,22 +1,47 @@
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --light-bg: #ffffff;
+  --light-text: #333333;
+  --light-highlight: #c1d606;
+  --light-hover: #b4b500;
+  
+  --dark-bg: #1a1a1a;
+  --dark-text: #ffffff;
+  --dark-highlight: #00b4d8;
+  --dark-hover: #0096c7;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
+[data-theme="light-theme"] {
+  background-color: var(--light-bg);
+  color: var(--light-text);
 }
 
-/* Navigation */
-.navbar {
-  background-color: #fff;
-  padding: 1rem 2rem;
+[data-theme="light-theme"] .navbar {
+  background-color: var(--light-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light-theme"] .footer {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+[data-theme="dark-theme"] {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+[data-theme="dark-theme"] .navbar {
+  background-color: var(--dark-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark-theme"] .footer {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.navbar {
+  padding: 1rem 2rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -26,65 +51,29 @@ body {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2d3436 !important;
+  color: var(--light-text) !important;
 }
 
-/* Footer */
 .footer {
-  background-color: #2d3436;
-  color: white;
-  padding: 2rem 0;
   margin-top: 4rem;
+  padding: 2rem 0;
+  background-color: var(--light-bg);
+  color: var(--light-text);
 }
 
-.footer-content {
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--dark-highlight);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* General Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Section Styling */
-.section {
-  padding: 4rem 0;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  color: #2d3436;
-  text-align: center;
-}
-
-/* Project Cards */
-.project-card {
-  background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .project-card {
-    padding: 1rem;
-  }
+.theme-toggle:hover {
+  background-color: var(--dark-hover);
 }
