@@ -1,10 +1,21 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import './assets/styles.css';
-import './assets/main.css';
-import router from './router';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-createApp(App)
-  .use(router)
-  .mount('#app');
+Vue.config.productionTip = false
+
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  once: true,
+  offset: 100
+})
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
