@@ -1,13 +1,13 @@
 <template>
   <div id="app" :class="themeClasses">
-    <AppNavbar />
+    <AppNavbar data-aos="fade-down" />
     <vue-page-transition name="fade-in-right">
       <router-view />
     </vue-page-transition>
-    <button class="theme-toggle" @click="toggleTheme">
+    <button class="theme-toggle" @click="toggleTheme" data-aos="fade-left" data-aos-delay="300">
       ☀️ / 🌙
     </button>
-    <AppFooter />
+    <AppFooter data-aos="fade-up" data-aos-delay="200" />
   </div>
 </template>
 
@@ -68,5 +68,13 @@ export default {
 }
 .theme-toggle:hover {
   transform: rotate(15deg) scale(1.1);
+}
+
+/* AOS custom styles */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
 }
 </style>
